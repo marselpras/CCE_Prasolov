@@ -1,0 +1,26 @@
+<div>
+    <div *ngFor="let department of items.json.departments; let dep_id = index">
+        <div *ngFor="let item of department.currencies;  let curr_id = index">
+            <div>
+                <img src="app/assets/Pic/{{item.code}}.png" alt="">
+                <p>{{item.code}}</p>
+            </div>
+            <div>
+                <span>Покупка</span>
+                <div *ngFor="let buy of item.buy; let buy_id = index">
+                    <input type="text" readonly="readonly" value="{{buy.value}}" [attr.data-department]="dep_id" [attr.data-currency]="curr_id" [attr.data-buy]="buy_id" [attr.data-type]="'value'">
+                    <input type="text" value="{{buy.text}}" [attr.data-department]="dep_id" [attr.data-currency]="curr_id" [attr.data-buy]="buy_id" [attr.data-type]="'text'">
+                </div>
+            </div>
+            <div>
+                <span>Продажа</span>
+                <div *ngFor="let sell of item.sell; let sell_id = index">
+                    <input type="text" readonly="readonly" value="{{sell.value}}" [attr.data-department]="dep_id" [attr.data-currency]="curr_id" [attr.data-sell]="sell_id" [attr.data-type]="'value'">
+                    <input type="text" value="{{sell.text}}" [attr.data-department]="dep_id" [attr.data-currency]="curr_id" [attr.data-sell]="sell_id" [attr.data-type]="'text'">
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="datetime-local" id="date">
+    <button (click)="updData()">Применить</button>
+</div>

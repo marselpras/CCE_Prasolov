@@ -1,0 +1,22 @@
+<div>
+    <div class="currency" *ngFor="let data of data.json.departments[0].currencies">
+        <div class="title">
+            <img src="app/assets/Pic/{{data.code}}.png" alt="">
+            <p>{{data.code}}</p>
+        </div>
+        <div class="buy">
+            <span>Покупка</span>
+            <div *ngFor="let buys of data.buy">
+                <p>{{buys.value}}</p>
+                <p>{{buys.text}}</p>
+            </div>
+        </div>
+        <div class="sell">
+            <span>Продажа</span>
+            <div *ngFor="let sells of data.sell">
+                <p>{{sells.value}}</p>
+                <p>{{sells.text}}</p>
+            </div>
+        </div>
+    </div>
+</div>

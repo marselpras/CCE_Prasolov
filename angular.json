@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "projects": {
+    "CCE_Prasolov": {
+      "projectType": "application",
+      "root": "",
+      "sourceRoot": "src",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/CCE_Prasolov",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.json",
+			"assets": [
+              "src/app/assets",
+              "src/app/assets/Pic"
+            ],
+			"styles": [
+              "src/styles.css"
+			],
+            "aot": true
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "CCE_Prasolov:build"
+          }
+        }
+      }
+    }},
+  "defaultProject": "CCE_Prasolov"
+}
