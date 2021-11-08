@@ -1,0 +1,7 @@
+.spn-txt {
+  margin-left: 5.5em;
+  flex-direction: row;
+}
+input {
+  flex-direction: column;
+}

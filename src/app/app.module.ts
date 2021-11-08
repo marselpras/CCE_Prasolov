@@ -7,6 +7,7 @@ import { HttpClient} from '@angular/common/http';
 import { UpdateComponent } from './update/update.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
+import { ConfigComponent } from './config/config.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ declarations: [
     AppComponent,
     UpdateComponent,
     HomeComponent,
+    ConfigComponent
 ],
 bootstrap: [AppComponent]})
 
